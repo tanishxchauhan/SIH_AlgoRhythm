@@ -1,0 +1,9 @@
+<h1>Assessments</h1>
+<ul>
+{% for a in assessments %}
+    <li>{{ a.area }} - {{ a.damages }} - {{ a.people_affected }}</li>
+{% empty %}
+    <li>No assessments found.</li>
+{% endfor %}
+</ul>
+<a href="{% url 'home' %}">Back to Home</a>

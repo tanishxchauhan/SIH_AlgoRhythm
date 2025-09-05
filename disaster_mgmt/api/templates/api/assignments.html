@@ -1,0 +1,9 @@
+<h1>Assignments</h1>
+<ul>
+{% for asg in assignments %}
+    <li>{{ asg.request_id }} - {{ asg.resource_id }} - {{ asg.status }}</li>
+{% empty %}
+    <li>No assignments found.</li>
+{% endfor %}
+</ul>
+<a href="{% url 'home' %}">Back to Home</a>

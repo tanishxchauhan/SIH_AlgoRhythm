@@ -1,0 +1,9 @@
+<h1>Requests</h1>
+<ul>
+{% for r in requests %}
+    <li>{{ r.user_id }} - {{ r.need }} - {{ r.location }} - {{ r.urgency }}</li>
+{% empty %}
+    <li>No requests found.</li>
+{% endfor %}
+</ul>
+<a href="{% url 'home' %}">Back to Home</a>

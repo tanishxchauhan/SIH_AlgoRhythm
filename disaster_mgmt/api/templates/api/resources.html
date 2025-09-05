@@ -1,0 +1,9 @@
+<h1>Resources</h1>
+<ul>
+{% for res in resources %}
+    <li>{{ res.type }} - {{ res.location }}</li>
+{% empty %}
+    <li>No resources found.</li>
+{% endfor %}
+</ul>
+<a href="{% url 'home' %}">Back to Home</a>
